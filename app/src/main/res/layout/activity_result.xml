@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ResultActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp">
+
+        <ImageView
+            android:id="@+id/photo_detectionResult"
+            android:layout_width="252dp"
+            android:layout_height="252dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_detectionResult"
+            app:srcCompat="@drawable/ulat"/>
+
+        <TextView
+            android:id="@+id/text_detectionResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_detectionResult"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_Disease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/bohemian_soul"
+            android:text="@string/text_disease"
+            android:textColor="@color/green"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_detectionResult" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/text_percentResult"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/bohemian_soul"-->
+<!--            android:text="@string/text_percentResult"-->
+<!--            android:textColor="@color/green"-->
+<!--            android:textSize="30sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_Disease"-->
+<!--            app:layout_constraintVertical_bias="0.0" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/text_percent"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/bohemian_soul"-->
+<!--            android:text="@string/text_percent"-->
+<!--            android:textColor="@color/green"-->
+<!--            android:textSize="30sp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/text_titleCountermeasures"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/text_percentResult"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_Disease"-->
+<!--            app:layout_constraintVertical_bias="0.0" />-->
+
+        <TextView
+            android:id="@+id/text_titleCountermeasures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_titleCountermeasures"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_Disease" />
+
+        <TextView
+            android:id="@+id/text_counterMeasures"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_counterMeasures"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:drawableLeftCompat="@drawable/bullet_point"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_titleCountermeasures"
+            app:layout_constraintVertical_bias="0.04" />
+
+        <Button
+            android:id="@+id/button_resultToHomePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_buttonResultToHomePage"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_counterMeasures"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_resultToArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_buttonResultToArticle"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toEndOf="@+id/button_resultToHomePage"
+            app:layout_constraintTop_toBottomOf="@+id/text_counterMeasures"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

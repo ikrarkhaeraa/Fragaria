@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_ulat"
+        android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_embunTepung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_ulat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/card_photoArticleUlat"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ulattittleartikel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/view_ulat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/red"
+                app:layout_constraintBottom_toBottomOf="@+id/card_photoArticleUlat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_photoArticleUlat"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/text_titleArticleUlat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_titleArticleUlat"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_photoArticleUlat"
+                app:layout_constraintEnd_toEndOf="@+id/view_ulat"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="@+id/view_ulat"
+                app:layout_constraintTop_toTopOf="@+id/view_ulat"
+                app:layout_constraintVertical_bias="0.466" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_embunTepung"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_embunTepung"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/card_photoArticleEmbunTepung"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/embuntepungtitleartikel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/view_embunTepung"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/red"
+                app:layout_constraintBottom_toBottomOf="@+id/card_photoArticleEmbunTepung"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_photoArticleEmbunTepung"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/text_titleArticleEmbungTepung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_titleArticleEmbunTepung"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_photoArticleEmbunTepung"
+                app:layout_constraintEnd_toEndOf="@+id/view_embunTepung"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="@+id/view_embunTepung"
+                app:layout_constraintTop_toTopOf="@+id/view_embunTepung"
+                app:layout_constraintVertical_bias="0.466" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_mite"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toTopOf="@id/cardView_embunTepung"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_mite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/card_photoArticleMite"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mitetitleartikel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/view_mite"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/red"
+                app:layout_constraintBottom_toBottomOf="@+id/card_photoArticleMite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_photoArticleMite"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/text_titleArticleMite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_titleArticleMite"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_photoArticleMite"
+                app:layout_constraintEnd_toEndOf="@+id/view_mite"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="@+id/view_mite"
+                app:layout_constraintTop_toTopOf="@+id/view_mite"
+                app:layout_constraintVertical_bias="0.466" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

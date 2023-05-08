@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/logo_fragaria"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/logofragaria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title_welcomePage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/bohemian_soul"
+        android:gravity="center"
+        android:text="@string/title_welcomePage"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_fragaria"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/introduction_welcomePage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/introduction_welcomePage"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_welcomePage"
+        app:layout_constraintVertical_bias="0.046"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_welcome"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="@string/text_buttonWelcome"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introduction_welcomePage"
+        app:layout_constraintVertical_bias="0.284"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
