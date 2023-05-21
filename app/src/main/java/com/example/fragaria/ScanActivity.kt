@@ -19,6 +19,7 @@ import androidx.core.content.FileProvider
 import com.example.fragaria.databinding.ActivityScanBinding
 import com.example.fragaria.ml.ConvertedModel
 import com.example.fragaria.ml.Mobilenetv2224OptsgdLr00003Epoch30
+import com.example.fragaria.ml.TfliteConvert
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.io.File
@@ -165,7 +166,7 @@ class ScanActivity : AppCompatActivity() {
 
     private fun predictImage(imagePredict: Bitmap) {
         try {
-            val model = Mobilenetv2224OptsgdLr00003Epoch30.newInstance(this.applicationContext)
+            val model = TfliteConvert.newInstance(applicationContext)
 
             // Creates inputs for reference.
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, imageSize, imageSize, 3), DataType.FLOAT32)
@@ -208,9 +209,9 @@ class ScanActivity : AppCompatActivity() {
             //declaration class from index
             if (resultDetection == confidences[0]) {
                 resultText = "Embun Tepung"
-            } else if ( resultDetection == confidences[2]){
-                resultText = "Mite"
             } else if ( resultDetection == confidences[1]){
+                resultText = "Mite"
+            } else if ( resultDetection == confidences[2]){
                 resultText = "Sehat"
             }
             else if ( resultDetection == confidences[3]){
