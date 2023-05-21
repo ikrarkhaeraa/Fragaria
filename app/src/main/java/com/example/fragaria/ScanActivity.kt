@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.fragaria.databinding.ActivityScanBinding
 import com.example.fragaria.ml.ConvertedModel
+import com.example.fragaria.ml.JnlEnb070Adam00332La
 import com.example.fragaria.ml.Mobilenetv2224OptsgdLr00003Epoch30
 import com.example.fragaria.ml.TfliteConvert
 import org.tensorflow.lite.DataType
@@ -166,7 +167,7 @@ class ScanActivity : AppCompatActivity() {
 
     private fun predictImage(imagePredict: Bitmap) {
         try {
-            val model = TfliteConvert.newInstance(applicationContext)
+            val model = JnlEnb070Adam00332La.newInstance(applicationContext)
 
             // Creates inputs for reference.
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, imageSize, imageSize, 3), DataType.FLOAT32)
@@ -202,20 +203,25 @@ class ScanActivity : AppCompatActivity() {
 //                    maxPos = i
                 }
             }
+            Log.d("cekOutput", outputs.toString())
             resultDetection = maxConfidence
 //            resultDetectionIntent = (resultDetection *100).toInt()
 
 
             //declaration class from index
-            if (resultDetection == confidences[0]) {
-                resultText = "Embun Tepung"
-            } else if ( resultDetection == confidences[1]){
-                resultText = "Mite"
-            } else if ( resultDetection == confidences[2]){
-                resultText = "Sehat"
-            }
-            else if ( resultDetection == confidences[3]){
-                resultText = "Ulat"
+            when (resultDetection) {
+                confidences[0] -> {
+                    resultText = "Embun Tepung"
+                }
+                confidences[1] -> {
+                    resultText = "Mite"
+                }
+                confidences[2] -> {
+                    resultText = "Sehat"
+                }
+                confidences[3] -> {
+                    resultText = "Ulat"
+                }
             }
 
 //            val classes = arrayOf("Gambar Valid", "Gambar invalid, tolong ulangi pemotretan agar api terdeteksi")
