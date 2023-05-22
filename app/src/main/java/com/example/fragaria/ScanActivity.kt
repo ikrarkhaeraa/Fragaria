@@ -158,6 +158,7 @@ class ScanActivity : AppCompatActivity() {
                 Log.d("kirimfoto", getMyFile.toString())
                 Log.d("kirimResultPercent", resultDetectionIntent.toString())
                 Log.d("kirimResultText", resultText)
+                Log.d("cekFoto", imagePredict.toString())
                     }
                 }
             } else {
@@ -167,7 +168,7 @@ class ScanActivity : AppCompatActivity() {
 
     private fun predictImage(imagePredict: Bitmap) {
         try {
-            val model = JnlEnb070Adam00332La.newInstance(applicationContext)
+            val model = TfliteConvert.newInstance(applicationContext)
 
             // Creates inputs for reference.
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, imageSize, imageSize, 3), DataType.FLOAT32)
@@ -182,12 +183,13 @@ class ScanActivity : AppCompatActivity() {
             for (i in 0 until imageSize) {
                 for (j in 0 until imageSize) {
                     val rgb = intValues[pixel++]
-                    byteBuffer.putFloat((rgb shr 16 and 0xFF) * (1f/255))
-                    byteBuffer.putFloat((rgb shr 8 and 0xFF) * (1f/255))
-                    byteBuffer.putFloat((rgb and 0xFF) * (1f/255))
+                    byteBuffer.putFloat((rgb shr 16 and 0xFF) * (1f/1))
+                    byteBuffer.putFloat((rgb shr 8 and 0xFF) * (1f/1))
+                    byteBuffer.putFloat((rgb and 0xFF) * (1f/1))
                 }
             }
             inputFeature0.loadBuffer(byteBuffer)
+
 
             // Runs model inference and gets result.
             val outputs = model.process(inputFeature0)
@@ -203,8 +205,15 @@ class ScanActivity : AppCompatActivity() {
 //                    maxPos = i
                 }
             }
-            Log.d("cekOutput", outputs.toString())
+
             resultDetection = maxConfidence
+            Log.d("cekOutput", resultDetection.toString())
+            Log.d("cekConfidences", maxConfidence.toString())
+            Log.d("cekOutput", confidences.indices.toString())
+            Log.d("cekIndex1", confidences[0].toString())
+            Log.d("cekIndex2", confidences[1].toString())
+            Log.d("cekIndex3", confidences[2].toString())
+            Log.d("cekIndex4", confidences[3].toString())
 //            resultDetectionIntent = (resultDetection *100).toInt()
 
 
@@ -223,9 +232,6 @@ class ScanActivity : AppCompatActivity() {
                     resultText = "Ulat"
                 }
             }
-
-//            val classes = arrayOf("Gambar Valid", "Gambar invalid, tolong ulangi pemotretan agar api terdeteksi")
-//            binding.imgValidationTv.setText(classes[maxPos])
 
             // Releases model resources if no longer used.
             model.close()
