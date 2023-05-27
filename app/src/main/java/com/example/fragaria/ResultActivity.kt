@@ -14,7 +14,6 @@ class ResultActivity : AppCompatActivity() {
 
     companion object {
         const val PHOTO = "photo"
-//        const val PERCENT = "percent"
         const val NAME = "text"
     }
 
@@ -32,9 +31,7 @@ class ResultActivity : AppCompatActivity() {
             .into(binding.photoDetectionResult)
 
         val disease = intent.getSerializableExtra(NAME)
-//        val percent = intent.getSerializableExtra(PERCENT)
         binding.textDisease.text = disease.toString()
-//        binding.textPercentResult.text = percent.toString()
         val counterMeasureSehat = getString(R.string.counterMeasureSehat)
         val counterMeasureUlat = getString(R.string.counterMeasureUlat)
         val counterMeasureEmbunTepung = getString(R.string.counterMeasureEmbunTepung)

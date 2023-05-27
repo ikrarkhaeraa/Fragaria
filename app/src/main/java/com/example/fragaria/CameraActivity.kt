@@ -15,7 +15,6 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.example.fragaria.databinding.ActivityCameraBinding
-import java.nio.file.Files.createFile
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -37,7 +36,7 @@ class CameraActivity : AppCompatActivity() {
 
         binding.captureImage.setOnClickListener { takePhoto() }
         binding.switchCamera.setOnClickListener {
-            cameraSelector = if (cameraSelector.equals(CameraSelector.DEFAULT_BACK_CAMERA)) CameraSelector.DEFAULT_FRONT_CAMERA
+            cameraSelector = if (cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA) CameraSelector.DEFAULT_FRONT_CAMERA
             else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
         }
@@ -133,14 +132,5 @@ class CameraActivity : AppCompatActivity() {
         }
         supportActionBar?.hide()
     }
-
-//    private fun goToScanPageAgain() {
-//        binding.apply {
-//            captureImage.setOnClickListener {
-//                val intentToScanPageAgain = Intent(this@CameraActivity, ScanActivity::class.java)
-//                startActivity(intentToScanPageAgain)
-//            }
-//        }
-//    }
 
 }

@@ -17,9 +17,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.fragaria.databinding.ActivityScanBinding
-import com.example.fragaria.ml.ConvertedModel
 import com.example.fragaria.ml.JnlEnb070Adam00332La
-import com.example.fragaria.ml.Mobilenetv2224OptsgdLr00003Epoch30
 import com.example.fragaria.ml.TfliteConvert
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
@@ -127,7 +125,6 @@ class ScanActivity : AppCompatActivity() {
 
             binding.previewImageView.setImageBitmap(result)
             imagePredict = Bitmap.createScaledBitmap(result, imageSize,imageSize,false)
-//            predictImage(imagePredict)
         }
     }
 
@@ -141,7 +138,6 @@ class ScanActivity : AppCompatActivity() {
             val result = BitmapFactory.decodeFile(getMyFile?.path)
             binding.previewImageView.setImageBitmap(result)
             imagePredict = Bitmap.createScaledBitmap(result, imageSize,imageSize,false)
-//            predictImage(imagePredict)
         }
     }
 
@@ -152,7 +148,6 @@ class ScanActivity : AppCompatActivity() {
                 predictImage(imagePredict)
                 val intentToResult = Intent(this@ScanActivity, ResultActivity::class.java)
                 intentToResult.putExtra(ResultActivity.PHOTO, getMyFile)
-//                intentToResult.putExtra(ResultActivity.PERCENT, resultDetectionIntent)
                 intentToResult.putExtra(ResultActivity.NAME, resultText)
                 startActivity(intentToResult)
                 Log.d("kirimfoto", getMyFile.toString())
@@ -197,12 +192,10 @@ class ScanActivity : AppCompatActivity() {
             val confidences = outputFeature0.floatArray
 
             //find index of the class with biggest confidence
-//            var maxPos = 0
             var maxConfidence = 0f
             for (i in confidences.indices) {
                 if (confidences[i] > maxConfidence) {
                     maxConfidence = confidences[i]
-//                    maxPos = i
                 }
             }
 

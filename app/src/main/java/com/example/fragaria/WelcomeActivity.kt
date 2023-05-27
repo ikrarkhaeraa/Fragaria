@@ -24,8 +24,6 @@ class WelcomeActivity : AppCompatActivity() {
             buttonWelcome.setOnClickListener {
                 val intentToHomePage = Intent(this@WelcomeActivity, HomeActivity::class.java)
                 startActivity(intentToHomePage)
-//             val toast = Toast.makeText(applicationContext, "toast", Toast.LENGTH_SHORT)
-//             toast.show()
             }
         }
     }
