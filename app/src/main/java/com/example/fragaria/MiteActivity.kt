@@ -13,7 +13,5 @@ class MiteActivity : AppCompatActivity() {
         binding = ActivityMiteBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mite)
-        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        supportActionBar?.setCustomView(R.layout.toolbar_layout)
     }
 }

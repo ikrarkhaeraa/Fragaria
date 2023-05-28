@@ -21,8 +21,6 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        supportActionBar?.setCustomView(R.layout.toolbar_layout)
 
         val photo = intent.getSerializableExtra(PHOTO)
         Log.d("dapetfoto", photo.toString())
@@ -37,14 +35,19 @@ class ResultActivity : AppCompatActivity() {
         val counterMeasureEmbunTepung = getString(R.string.counterMeasureEmbunTepung)
         val counterMeasureMite = getString(R.string.counterMeasureMite)
 
-        if (disease == "Sehat") {
-            binding.textCounterMeasures.text = counterMeasureSehat
-        } else if (disease == "Ulat") {
-            binding.textCounterMeasures.text = counterMeasureUlat
-        } else if (disease == "Embun Tepung") {
-            binding.textCounterMeasures.text = counterMeasureEmbunTepung
-        } else {
-            binding.textCounterMeasures.text = counterMeasureMite
+        when (disease) {
+            "Sehat" -> {
+                binding.textCounterMeasures.text = counterMeasureSehat
+            }
+            "Ulat" -> {
+                binding.textCounterMeasures.text = counterMeasureUlat
+            }
+            "Embun Tepung" -> {
+                binding.textCounterMeasures.text = counterMeasureEmbunTepung
+            }
+            else -> {
+                binding.textCounterMeasures.text = counterMeasureMite
+            }
         }
 
         Log.d("cekCounterMeasureText", binding.textCounterMeasures.text.toString())

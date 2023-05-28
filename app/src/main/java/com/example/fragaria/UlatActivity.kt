@@ -13,7 +13,5 @@ class UlatActivity : AppCompatActivity() {
         binding = ActivityUlatBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        supportActionBar?.setCustomView(R.layout.toolbar_layout)
     }
 }

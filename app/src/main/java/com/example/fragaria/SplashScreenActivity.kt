@@ -14,8 +14,6 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        supportActionBar?.setCustomView(R.layout.toolbar_layout)
 
         binding.logoFragariaSplashscreen.alpha = 0f
         binding.logoFragariaSplashscreen.animate().setDuration(3000).alpha(1f).withEndAction {

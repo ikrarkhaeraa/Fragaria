@@ -69,9 +69,6 @@ class ScanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        supportActionBar?.setCustomView(R.layout.toolbar_layout)
-        //chooseButton()
 
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
@@ -200,15 +197,6 @@ class ScanActivity : AppCompatActivity() {
             }
 
             resultDetection = maxConfidence
-            Log.d("cekOutput", resultDetection.toString())
-            Log.d("cekConfidences", maxConfidence.toString())
-            Log.d("cekOutput", confidences.indices.toString())
-            Log.d("cekIndex1", confidences[0].toString())
-            Log.d("cekIndex2", confidences[1].toString())
-            Log.d("cekIndex3", confidences[2].toString())
-            Log.d("cekIndex4", confidences[3].toString())
-//            resultDetectionIntent = (resultDetection *100).toInt()
-
 
             //declaration class from index
             when (resultDetection) {
@@ -225,6 +213,14 @@ class ScanActivity : AppCompatActivity() {
                     resultText = "Ulat"
                 }
             }
+
+            Log.d("cekOutput", resultDetection.toString())
+            Log.d("cekConfidences", maxConfidence.toString())
+            Log.d("cekOutput", confidences.indices.toString())
+            Log.d("cekIndex1", confidences[0].toString())
+            Log.d("cekIndex2", confidences[1].toString())
+            Log.d("cekIndex3", confidences[2].toString())
+            Log.d("cekIndex4", confidences[3].toString())
 
             // Releases model resources if no longer used.
             model.close()
