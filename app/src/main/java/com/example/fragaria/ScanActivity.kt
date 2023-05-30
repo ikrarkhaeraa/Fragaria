@@ -139,9 +139,8 @@ class ScanActivity : AppCompatActivity() {
     }
 
     private fun uploadImage() {
+        Log.d("cekFile", getMyFile.toString())
             if (getMyFile != null) {
-                binding.apply {
-            uploadButton.setOnClickListener {
                 predictImage(imagePredict)
                 val intentToResult = Intent(this@ScanActivity, ResultActivity::class.java)
                 intentToResult.putExtra(ResultActivity.PHOTO, getMyFile)
@@ -151,10 +150,8 @@ class ScanActivity : AppCompatActivity() {
                 Log.d("kirimResultPercent", resultDetectionIntent.toString())
                 Log.d("kirimResultText", resultText)
                 Log.d("cekFoto", imagePredict.toString())
-                    }
-                }
             } else {
-                Toast.makeText(applicationContext, "Input Image First", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Masukkan foto daun terlebih dahulu", Toast.LENGTH_SHORT).show()
             }
         }
 
