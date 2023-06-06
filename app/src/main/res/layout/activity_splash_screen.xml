@@ -7,7 +7,7 @@
     tools:context=".SplashScreenActivity">
 
     <ImageView
-        android:id="@+id/logo_fragaria_splashscreen"
+        android:id="@+id/logo_fragaria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/logofragaria"

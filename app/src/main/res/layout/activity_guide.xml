@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/text_titleGuide"
@@ -72,7 +72,6 @@
             app:layout_constraintVertical_bias="0.022" />
 
         <TextView
-            android:id="@+id/stroke_guide1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/stroke"
@@ -113,7 +112,6 @@
             app:layout_constraintVertical_bias="0.035" />
 
         <TextView
-            android:id="@+id/stroke_guide2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -155,7 +153,6 @@
             app:layout_constraintVertical_bias="0.049" />
 
         <TextView
-            android:id="@+id/stroke_guide3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/stroke"
@@ -196,7 +193,6 @@
             app:layout_constraintVertical_bias="0.103"/>
 
         <TextView
-            android:id="@+id/stroke_guide4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/stroke"
@@ -225,7 +221,6 @@
             app:layout_constraintVertical_bias="0.076" />
 
         <ImageView
-            android:id="@+id/imageView_guide5"
             android:layout_width="149dp"
             android:layout_height="265dp"
             android:src="@drawable/guide5"
@@ -237,7 +232,6 @@
             app:layout_constraintVertical_bias="0.422"/>
 
         <TextView
-            android:id="@+id/stroke_guide5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

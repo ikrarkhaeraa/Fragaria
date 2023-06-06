@@ -1,8 +1,7 @@
 package com.example.fragaria
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.example.fragaria.databinding.ActivityEmbunTepungBinding
 
 class EmbunTepungActivity : AppCompatActivity() {

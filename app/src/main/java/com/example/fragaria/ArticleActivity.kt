@@ -1,9 +1,8 @@
 package com.example.fragaria
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.example.fragaria.databinding.ActivityArticleBinding
 
 class ArticleActivity : AppCompatActivity() {

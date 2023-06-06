@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.bumptech.glide.Glide
-import androidx.appcompat.app.ActionBar
 import com.example.fragaria.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {

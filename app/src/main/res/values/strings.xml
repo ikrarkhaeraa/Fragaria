@@ -11,8 +11,6 @@
     <string name="text_buttonUpload">Unggah</string>
     <string name="text_detectionResult">Hasil Deteksi:</string>
     <string name="text_disease">Ulat</string>
-    <string name="text_percentResult">98</string>
-    <string name="text_percent">%</string>
     <string name="text_titleCountermeasures">Cara Penanggulangan:</string>
     <string name="text_counterMeasures"><pre>1. Lorem ipsum dolor sit amet.\n2.  Consectetur adipiscing elit.\n3.  Aliquam vitae risus id ex pellentesque finibus.\n4.  Nulla facilisi. Nunc quis ultrices nulla.\n5.  Duis sodales nunc et odio pellentesque, non pulvinar est sollicitudin.\n6.  Quisque at felis in leo dapibus cursus sed non tellus.\n7.  Aliquam id porta massa, quis tempor tortor.\n8.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n9.  Integer magna mi, facilisis non odio non.</pre>
     </string>
