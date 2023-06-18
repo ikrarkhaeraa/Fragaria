@@ -35,7 +35,7 @@ class ScanActivity : AppCompatActivity() {
     private lateinit var imagePredict: Bitmap
 
     companion object {
-        const val CAMERA_X_RESULT = 200
+        const val CAMERA_X_RESULT = 700
 
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
