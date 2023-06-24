@@ -164,7 +164,7 @@ class ScanActivity : AppCompatActivity() {
 
             inputFeature0.loadBuffer(byteBuffer)
             val intValues = IntArray(imageSize*imageSize)
-            imagePredict.getPixels(intValues,0,imagePredict.width,0,0,imagePredict.width,imagePredict.height)
+            imagePredict.getPixels(intValues,0,imagePredict .width,0,0,imagePredict.width,imagePredict.height)
             var pixel = 0
 
             for (i in 0 until imageSize) {
