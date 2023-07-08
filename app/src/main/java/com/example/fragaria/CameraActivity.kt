@@ -37,8 +37,6 @@ class CameraActivity : AppCompatActivity() {
             else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
         }
-
-        //goToScanPageAgain()
     }
 
     override fun onResume() {

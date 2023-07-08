@@ -170,9 +170,9 @@ class ScanActivity : AppCompatActivity() {
             for (i in 0 until imageSize) {
                 for (j in 0 until imageSize) {
                     val rgb = intValues[pixel++]
-                    byteBuffer.putFloat((rgb shr 16 and 0xFF) * (1f/1))
-                    byteBuffer.putFloat((rgb shr 8 and 0xFF) * (1f/1))
-                    byteBuffer.putFloat((rgb and 0xFF) * (1f/1))
+                    byteBuffer.putFloat((rgb shr 16 and 0xFF).toFloat())
+                    byteBuffer.putFloat((rgb shr 8 and 0xFF).toFloat())
+                    byteBuffer.putFloat(((rgb and 0xFF).toFloat()))
                 }
             }
             inputFeature0.loadBuffer(byteBuffer)
